@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - AutoRental</title>
+    <link rel="stylesheet" href="css/styledash.css">
+</head>
+<body>
+    <header class="container">
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="backend/logout.php">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="dashboard container">
+        <h2>Available Vehicles</h2>
+        <!-- Pencarian dan filter -->
+        <input type="text" id="search" placeholder="Search by vehicle name...">
+        <select id="typeFilter">
+            <option value="">All Types</option>
+            <option value="lgcc">LGCC</option>
+            <option value="suv">SUV</option>
+            <option value="sedan">Sedan</option>
+        </select>
+
+        <!-- List kendaraan -->
+        <div id="vehicleList"></div>
+    </section>
+
+    <!-- Popup Rental Form -->
+    <div id="rentalPopup" class="popup hidden">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Rent Vehicle</h2>
+            <form id="rentVehicleForm">
+                <input type="hidden" id="rentalVehicleId">
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" required>
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" required>
+                <label for="bookingNotes">Booking Notes:</label>
+                <textarea id="bookingNotes"></textarea>
+                <button type="submit">Confirm Rental</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
