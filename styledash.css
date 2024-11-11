@@ -1,0 +1,20 @@
+.vehicle-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.vehicle-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.vehicle-card button:hover {
+    background-color: #0056b3;
+}
